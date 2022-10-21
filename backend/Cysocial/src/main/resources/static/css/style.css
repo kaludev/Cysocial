@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:wght@300&display=swap');
+*{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif!important;
+}
+head{
+    background-color: black !important;
+}
+body{
+    background-color: black !important;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+}
+
+.animate{
+    position: absolute;
+    color: #009900;
+    z-index: -1;
+    top: -10vh;
+    opacity: 1;
+    font-size: 2rem;
+    
+    animation: rise 1350ms linear forwards;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    height: 95vh;
+}
+
+.login{
+    min-height: 500px;
+    height: fit-content;
+    border-radius: 15px;
+}
+.loginImage img{
+    width: 100%;
+    border-right: 2px solid #505050;
+}
+.navbar-image{
+    height: 40px;
+    width: 40px;
+}
+form{
+   margin: auto;
+   width: 100%;
+}
+.form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #505050;
+}
+.form form input{
+    width: 80%;
+    color: #505050!important;
+    border: none;
+    border-radius: 0 !important;
+    border-bottom:  3px solid #505050;
+    outline: none !important;
+}
+.form form input:checked{
+    border-bottom:  3px solid #505050;
+}
+.form form input:active,.form form input:focus,.form form input:hover{
+    outline: none !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.form form button{
+    width: initial;
+}
+.form form input[type=checkbox]{
+    width: 15px;
+}
+
+
+.btn {
+    position: relative;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #B1D237 !important;
+    text-decoration: none;
+    font-size: 2em;
+    display: inline-block;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    border: 2px solid #B1D237 !important;
+    transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.btn::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #B1D237!important;
+    transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    z-index: -1;
+  }
+.btn::after {
+    content: "";
+    display: inline-block;
+    background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
+    position: absolute;
+    top: 0;
+    left: calc(100% - 3em);
+    right: 3em;
+    bottom: 0;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+.btn:hover {
+    padding: 0.4em 3.5em 0.4em 0.5em;
+  }
+.btn:hover::before {
+    left: calc(100% - 3em);
+    right: 0;
+    transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+.btn:hover::after {
+    right: 0;
+    transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.settings,.posts,.livechat{
+    width: 95%;
+    max-width: 95%;
+    border-radius: 15px;
+    height: 90vh;
+    z-index: 1;
+    margin: auto;
+    margin-top: 3vh;
+    transition: auto 1s;
+    overflow: auto;
+    color: #505050;
+}
+.settings{
+    position: relative;
+
+}
+
+.send textarea::-webkit-scrollbar,.settings::-webkit-scrollbar,.posts::-webkit-scrollbar,.livechat::-webkit-scrollbar{
+    width: 1vh;
+}
+
+.send textarea::-webkit-scrollbar-thumb,.settings::-webkit-scrollbar-thumb,.posts::-webkit-scrollbar-thumb,.livechat::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #505050;
+}
+.send textarea::-webkit-scrollbar-track, .settings::-webkit-scrollbar-track,.posts::-webkit-scrollbar-track,.livechat::-webkit-scrollbar-track{
+    background-color: #222222;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.profile{
+    border-radius: 15px;
+    min-height: 150px;
+    width: 90%;
+    background-color: #505050;
+    margin:auto;
+    margin-top: 30px;
+}
+.profile img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+
+}
+.profile p,small{
+    color: #222222;
+    float: left;
+    width: 100%;
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.info{
+    display: inline-block;
+    width: 130px;
+    margin-top: 20px;
+}
+.option{
+    display: block;
+    border-radius: 15px;
+    text-decoration: none;
+    height: fit-content;
+    width: 90%;
+    background-color: #505050;
+    color: #222222;
+    margin:auto;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 900;
+    padding: 8px 0px;
+}
+
+.option:hover{
+    background-color: #313131;
+    color: #505050;
+}
+
+.send{
+    display: block;
+    border-radius: 15px;
+    margin:auto;
+    margin-top: 20px;
+    
+    width: 95%;
+    background-color: #505050;
+    color: #222222;
+}
+
+.send textarea{
+    
+    max-width: 80%;
+    width: 80%;
+    display: inline-block;
+    border-radius: 15px;
+    height: fit-content;
+    margin-left: 20px;
+    margin-top: 20px!important;
+    padding: 5px;
+    resize: none;
+    color: #505050;
+}
+.send ion-icon{
+    color: #222222;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    font-size: 100px;
+    z-index: 100000;
+    transition: all 0.2s;
+}
+.send ion-icon:hover{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.post{
+    padding: 10px;
+    display: block;
+    border-radius: 15px;
+    margin:auto;
+    margin-top: 20px;
+    width: 95%;
+    background-color: #505050;
+    color: #222222;
+}
+.imagediv{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+.imagediv img{
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    margin:auto;
+}
+
+.profile-img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+@keyframes rise {
+    to{
+        transform: translateY(125vh);
+        opacity: 0;
+    }
+
+}
+.message{
+    width: 80%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: fit-content;
+}
+
+.mymessage{
+    float: left;
+    border-bottom-right-radius: 15px;
+    background-color: #505050;
+    margin-top: 25px;
+    color: #222222;
+}
+.strangersmessage{
+    float: right;
+    border-bottom-left-radius: 15px;
+    background-color: #505050;
+    margin-top: 25px;
+    color: #222222;
+    text-align: right;
+    padding-right: 5px;
+}
+.message-img{
+    float: right;
+    width: 20%;
+}
+
+.profilediv{
+   float: left;
+   max-height: 50px;
+   height: 50px;
+}
+.profilediv p{
+    margin-bottom: 0;
+}
+.post p{
+    width: 100%;
+}
+.clearfix {
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

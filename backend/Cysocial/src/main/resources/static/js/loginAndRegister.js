@@ -50,7 +50,6 @@ loginBtn.addEventListener('click',()=>{
         form.removeChild(username);
         passwordNode.removeChild(password)
         document.querySelector('#Password').parentNode.classList.remove('col-5');
-        document.querySelector('.button').textContent = "LOG IN";
     }
 }
 )
@@ -63,13 +62,10 @@ registerBtn.addEventListener('click', () =>{
         form.insertBefore(username,form.querySelector('#Email1').parentNode);
         document.querySelector('#Password').parentNode.classList.add('col-5');
         passwordNode.appendChild(password)
-        document.querySelector('.button').textContent = "REGISTER";
-    }
-})
 
-//
+    }
+})/*
 document.querySelector('form').querySelector('button').addEventListener('click',() =>{
-    alert("TODO: send request to backend");
     location.href = './assets/pages/main.html';
 })
-
+*/
